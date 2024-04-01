@@ -24,9 +24,13 @@ Experience the power of the Password Generator firsthand by visiting the live de
 
 ## 📂 Project Structure
 Password_Generator/
+
 ├── index.html
+
 ├── style.css
+
 ├── script.js
+
 └── README.md
 
 - `index.html`: The main HTML file that contains the structure of the application.
