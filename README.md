@@ -1,3 +1,34 @@
+# 🔐 Password Generator
+
+Welcome to the Password Generator! 🎉 This is a sleek and user-friendly web application built with HTML, CSS, and JavaScript. It allows you to generate strong, random passwords tailored to your preferences, ensuring maximum security for your online accounts. 🔒
+
+## 🌐 Live Demo
+
+Experience the power of the Password Generator firsthand by visiting the live demo: [https://modded-soldier-9.github.io/Password_Generator/](https://modded-soldier-9.github.io/Password_Generator/)
+
+## 🚀 Features
+
+- 📏 Generate passwords with lengths ranging from 8 to 20 characters
+- 🔡 Option to include or exclude uppercase letters
+- 🔠 Option to include or exclude lowercase letters
+- 🔢 Option to include or exclude numbers
+- 🔣 Option to include or exclude symbols
+- 📋 Copy generated password to clipboard with a single click
+- 🕰️ Password history to view and copy previously generated passwords
+
+## 🛠️ Technologies Used
+
+- 🌐 HTML
+- 🎨 CSS
+- 💻 JavaScript
+
+## 📂 Project Structure
+Password_Generator/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+
 - `index.html`: The main HTML file that contains the structure of the application.
 - `style.css`: The CSS file that styles the application's user interface.
 - `script.js`: The JavaScript file that handles the password generation logic and user interactions.
