@@ -1,48 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Password Generator</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="mossy">
-	    <div class="container">
-		<h1>Password Generator</h1>
-		<div class="input-group">
-			<label for="password-length">Password Length:</label>
-			<input type="number" id="password-length" min="8" max="20" value="12">
-		</div>
-		<div class="input-group">
-			<label>
-				<input type="checkbox" id="include-uppercase" checked>
-				Include Uppercase
-			</label>
-			<label>
-				<input type="checkbox" id="include-lowercase" checked>
-				Include Lowercase
-			</label>
-			<label>
-				<input type="checkbox" id="include-numbers" checked>
-				Include Numbers
-			</label>
-			<label>
-				<input type="checkbox" id="include-symbols" checked>
-				Include Symbols
-			</label>
-		</div>
-		<button id="generate-password">Generate Password</button>
-		<div class="output-group">
-			<label for="password-output">Generated Password:</label>
-			<input type="text" id="password-output" readonly>
-			<button id="copy-password">Copy</button>
-		</div>
-		<div class="password-history">
-			<h3>Password History:</h3>
-			<ul id="password-list"></ul>
-		</div>
-	</div>
+    <div class="container">
+        <h1 data-key="title">Password Generator</h1>
+
+        <div class="input-group">
+            <label for="password-length" data-key="length-label">Password Length:</label>
+            <input type="range" id="password-length" min="8" max="32" value="12">
+            <span id="length-display">12</span>
+        </div>
+
+        <div class="input-group">
+            <label><input type="checkbox" id="include-uppercase" checked> <span data-key="include-uppercase">Include Uppercase</span></label>
+            <label><input type="checkbox" id="include-lowercase" checked> <span data-key="include-lowercase">Include Lowercase</span></label>
+            <label><input type="checkbox" id="include-numbers" checked> <span data-key="include-numbers">Include Numbers</span></label>
+            <label><input type="checkbox" id="include-symbols" checked> <span data-key="include-symbols">Include Symbols</span></label>
+        </div>
+
+        <div class="input-group">
+            <label for="custom-symbols" data-key="custom-symbols">Custom Symbols:</label>
+            <input type="text" id="custom-symbols" placeholder="e.g., %@#*">
+        </div>
+
+        <button id="generate-password" class="btn-primary" data-key="generate-btn">Generate Password</button>
+
+        <div id="strength-suggestions" class="hidden"></div>
+
+        <progress id="strength-bar" max="5" value="0"></progress>
+
+        <div class="output-group">
+            <label for="password-output" data-key="generated-password">Generated Password:</label>
+            <input type="text" id="password-output" readonly>
+            <button id="copy-password" class="btn-secondary" data-key="copy-btn">Copy</button>
+        </div>
+
+        <div class="password-history">
+            <h3 data-key="password-history">Password History:</h3>
+            <ul id="password-list"></ul>
+            <button id="clear-history" class="btn-secondary" data-key="clear-history-btn">Clear History</button>
+        </div>
+
+        <div class="settings">
+            <select id="language-select" class="btn-select">
+                <option value="en" data-key="lang-en">English</option>
+                <option value="es" data-key="lang-es">Español</option>
+                <option value="ar" data-key="lang-ar">العربية</option>
+            </select>
+            <button id="theme-toggle" class="btn-secondary" data-key="toggle-theme">Toggle Dark Mode</button>
+        </div>
     </div>
-	<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
